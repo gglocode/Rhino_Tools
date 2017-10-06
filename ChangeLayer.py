@@ -12,6 +12,7 @@ import Rhino
 import getLayerList
 
 def main():
+    sc.doc = Rhino.RhinoDoc.ActiveDoc
     rs.EnableRedraw(enable=False)
 
     topList = []
@@ -32,16 +33,20 @@ def main():
         topList.remove(destinationLayer)
         for layer in topList:
             sc.doc = Rhino.RhinoDoc.ActiveDoc
+            
             rs.LayerVisible(layer, True)
             rs.ExpandLayer(layer, False)
             
     else:
+        sc.doc = Rhino.RhinoDoc.ActiveDoc
+        
         topList.remove("TURN ALL ON")
         topList.remove(destinationLayer)
         rs.CurrentLayer(layer = destinationLayer)
         rs.ExpandLayer(destinationLayer, True)
         for layer in topList:
             sc.doc = Rhino.RhinoDoc.ActiveDoc
+            
             rs.LayerVisible(layer, False)
             rs.ExpandLayer(layer, False)
             

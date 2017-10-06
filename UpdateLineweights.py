@@ -9,6 +9,7 @@ rs.EnableRedraw(enable=False)
 
 
 layerDict["A-WALL"] = {"LayerLinetype" : "Continuous", "LayerPrintWidth" : 0.6}
+layerDict["A-BLDG-SHAFT"] = {"LayerLinetype" : "dashed", "LayerPrintWidth" : 0.3cl }
 layerDict["S-COL"] = {"LayerLinetype" : "Continuous", "LayerPrintWidth" : 0.3}
 layerDict["S-COLS"] = layerDict["S-COL"]
 layerDict["A-WALL-INTR"] = {"LayerLinetype" : "Continuous", "LayerPrintWidth" : 0.3}
